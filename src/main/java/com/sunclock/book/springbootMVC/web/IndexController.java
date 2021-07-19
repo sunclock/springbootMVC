@@ -1,5 +1,7 @@
 package com.sunclock.book.springbootMVC.web;
 
+import com.sunclock.book.springbootMVC.config.auth.LoginUser;
+import com.sunclock.book.springbootMVC.config.auth.dto.SessionUser;
 import com.sunclock.book.springbootMVC.service.posts.PostsService;
 import com.sunclock.book.springbootMVC.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -8,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.servlet.http.HttpSession;
+
 @RequiredArgsConstructor
 @Controller
 public class IndexController {
@@ -15,8 +19,11 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model) { // model: stores objects which can be used at serverside template engine
+    public String index(Model model, @LoginUser SessionUser user) { // model: stores objects which can be used at serverside template engine
         model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "index";
     }
 
