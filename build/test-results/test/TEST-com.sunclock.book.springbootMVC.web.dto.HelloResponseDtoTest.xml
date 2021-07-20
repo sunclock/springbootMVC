@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.sunclock.book.springbootMVC.web.dto.HelloResponseDtoTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-20T06:25:44" hostname="Macs-MacBook-Pro.local" time="0.138">
+  <properties/>
+  <testcase name="test_lombok" classname="com.sunclock.book.springbootMVC.web.dto.HelloResponseDtoTest" time="0.138"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
