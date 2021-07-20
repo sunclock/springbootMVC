@@ -1,5 +1,5 @@
 # springboot와 AWS로 혼자 구현하는 웹서비스
-이동욱(@jojoldu)님의 저서 'springboot와 AWS로 혼자 구현하는 웹서비스'를 따라 공부한 기록입니다.
+이동욱(@jojoldu)님의 저서 '스프링부트와 AWS로 혼자 구현하는 웹서비스'를 따라 공부한 기록입니다.
 
 ## 실습 목적
 [soul_food 심리테스트](https://github.com/sunclock/soul_food) 프로젝트의 차기 프로젝트로 식당 리뷰 플랫폼 모바일 앱 백엔드 개발을 맡았습니다. 
