@@ -1,6 +1,7 @@
 package com.sunclock.book.springbootMVC.web.dto;
 
 import com.sunclock.book.springbootMVC.domain.posts.Posts;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,18 +16,13 @@ import lombok.NoArgsConstructor;
 // dto class for request and response is frequently changed as this dto class is for view!
 // it's a best practice to separate role of View Layer and DB Layer.
 @Getter
+@AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class PostsSaveRequestDto {
     private String title;
     private String content;
     private String author;
-
-    @Builder
-    public PostsSaveRequestDto(String title, String content, String author) {
-        this.title = title;
-        this.content = content;
-        this.author = author;
-    }
 
     public Posts toEntity() {
         return Posts.builder()
